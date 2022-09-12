@@ -58,3 +58,32 @@ Para ello es tan sencillo como ejecutar: `npx create-react-app counter-app`
 Podemos ejecutar el comando `yarn dev`
 podemos usar el atajo `imr + tab` para realizar importaciones de manera sencilla.
 
+## Componentes de nuestro REACT
+
+* Importaciones/Exportaciones
+    ```
+    import React from 'react' //Importación de react
+    import ReactDOM from 'react-dom/client' //Herramienta para renderizar
+
+    ```
+* Functional components
+    ```
+    function App(){
+    //document.createElement...
+    return (<h1>Hola Mundo</h1>);
+    }
+    
+    ```
+* Forma de renderizar elementos
+    ```
+    ReactDOM.createRoot(document.getElementById('root')).render(
+    <React.StrictMode>
+        {/* Comentario: 
+        Mandando a llamar el nombre de nuestra function */}
+        <App /> 
+        </React.StrictMode>
+    );
+    ```
+
+## Shortcut para crear componente
+`rafc + tab` --> Creara el componente
