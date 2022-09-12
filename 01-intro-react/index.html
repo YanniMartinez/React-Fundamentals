@@ -22,9 +22,9 @@
     <script type="text/babel">
         //Busca el elemento con ese ID
         const divRoot = document.querySelector('#root');
-
+        const nombre ='Goku';
         //JSX, mezcla de JS con JSX
-        const h1Tag = <h1>Hola Mundo</h1>;
+        const h1Tag = <h1>Hola, soy {nombre}</h1>;
 
         //Diciendole a REACT que renderice el elemento h1 en el HTML
         ReactDOM.render(h1Tag, divRoot);
