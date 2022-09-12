@@ -40,14 +40,14 @@
 } */
 
 //Normalmente se desescturcturan los datos, como acontinuación:
-export const FirstApp = ( {title} ) => {
+export const FirstApp = ( {title, subTitle} ) => {
 
     console.log( title );
 
     return (
       <>
           <h1>{ title }</h1>
-          <p>Soy un subtitulo</p>
+          <p>{ subTitle + 1}</p>
       </>
     )
 }
