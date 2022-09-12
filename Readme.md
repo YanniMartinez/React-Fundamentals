@@ -49,3 +49,12 @@ Para crear una app con Vite podemos usar `yarn create vite`.
 **NOTA:** Si no se tiene Yarn puede instalarlo usando el siguiente comando `npm install -g yarn`
 
 Cuando termine de crearse el proyecto ejecutamos `yarn` ó `yarn install` para traer todas las dependencias.
+
+## Creación de app usando Create-react-app
+
+Para ello es tan sencillo como ejecutar: `npx create-react-app counter-app`
+
+## Levantar proyecto YARN
+Podemos ejecutar el comando `yarn dev`
+podemos usar el atajo `imr + tab` para realizar importaciones de manera sencilla.
+
