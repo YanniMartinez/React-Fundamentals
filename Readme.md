@@ -87,3 +87,13 @@ podemos usar el atajo `imr + tab` para realizar importaciones de manera sencilla
 
 ## Shortcut para crear componente
 `rafc + tab` --> Creara el componente
+
+## Declaración de functional component
+```
+export const HelloWorldApp = () =>{
+    return(
+        <h1>Hello World App</h1>
+    );
+}
+
+```
