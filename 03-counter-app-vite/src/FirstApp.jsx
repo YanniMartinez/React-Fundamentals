@@ -22,10 +22,26 @@
 // }
 
 //Equivalente de fragmentos: Siempre debemos regresar almenos 1 nodo padre
+//Podemos mostrar expresiones validas de JS pero no objetos
+/**
+ * Si no estamos modificando el valor y además no tiene relación con un hoock
+ * entonces podemos ponerlo fuera del functional component, sin embargo, no se pon
+ * en el scope global, significa que está dentro del componente encapsulado. 
+ * REACT no re-renderizar elementos fuera de los functional components, ahorra recursos
+ */
+const newMessage = {
+    message: 'Hola Mundo',
+    title: 'Yanni'
+};
+const newArray = [1,2,3,4,5,6,7,8,9];
+
 export const FirstApp = () => {
+
     return (
       <>
-          <h1>Yanni Martinez</h1>
+          {/* Como alternativa podemos usar un Stringify */}
+          <code> { JSON.stringify(newMessage) } </code>
+          <p>{ newArray }</p> {/* Notaremos que cada elemento está separado */}
           <p>Soy un subtitulo</p>
       </>
     )
