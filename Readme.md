@@ -123,4 +123,13 @@ export const FirstApp = ( {title, subTitle} ) => {
 ```
 
 ## PropTypes
-Tipos de las properties.
+Tipos de las properties. Por defecto en VITE no vienen las proptypes, para agregarlas debemos ejecutar el siguiente comando: `yarn add prop-types`.
+Permiten definirle el tipo a las properties.
+La manera de definirlas puede ser de la siguiente manera, donde indicamos el nombre, el tipo de dato y si son obligatorias o no:
+```
+FirstApp.PropTypes = {
+    /* Le inficamos que el titulo debe ser string y ademas requerido */
+    title: PropTypes.string.isRequired,
+    subTitle: PropTypes.number.isRequired,
+}
+```

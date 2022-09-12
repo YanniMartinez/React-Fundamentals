@@ -39,12 +39,12 @@
     return a+b;
 } */
 
+//Importando las propTypes
+import PropTypes from 'prop-types';
+
+
 //Normalmente se desescturcturan los datos, como acontinuación:
 export const FirstApp = ( {title, subTitle} ) => {
-
-    if(!title){
-        throw new Error('El title no existe');
-    }
 
     return (
       <>
@@ -52,6 +52,16 @@ export const FirstApp = ( {title, subTitle} ) => {
           <p>{ subTitle + 1}</p>
       </>
     )
+}
+
+
+/**
+ * Utilizando y definiendo las propTypes (Definimos un objeto)
+ */
+FirstApp.PropTypes = {
+    /* Le inficamos que el titulo debe ser string y adem´sa requerido */
+    title: PropTypes.string.isRequired,
+    subTitle: PropTypes.number.isRequired,
 }
 
 
