@@ -35,19 +35,34 @@
 // };
 // const newArray = [1,2,3,4,5,6,7,8,9];
 
-const getResult = (a,b) =>{
+/* const getResult = (a,b) =>{
     return a+b;
-}
+} */
 
-export const FirstApp = () => {
+//Normalmente se desescturcturan los datos, como acontinuación:
+export const FirstApp = ( {title} ) => {
+
+    console.log( title );
 
     return (
       <>
-          {/* Como alternativa podemos usar un Stringify */}
-          {/* <code> { JSON.stringify(newMessage) } </code>
-          <p>{ newArray }</p> */} {/* Notaremos que cada elemento está separado */}
-          <h1>{ getResult( 1,2 )}</h1>
+          <h1>{ title }</h1>
           <p>Soy un subtitulo</p>
       </>
     )
-  }
+}
+
+
+/*
+export const FirstApp = ( props ) => {
+
+    console.log(props);
+
+    return (
+      <>
+          <h1>{ props.title }</h1>
+          <p>Soy un subtitulo</p>
+      </>
+    )
+}
+ */

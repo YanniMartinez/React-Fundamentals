@@ -97,3 +97,8 @@ export const HelloWorldApp = () =>{
 }
 
 ```
+
+## Properties o PROPS
+Son las propiedades que se le mandan a las funciones, normalmente son desestructuradas. Estas son un objeto y contienen información dependiendo del contexto.
+Las properties son propiedades que fluyen del componente padre al componente hijo.
+Para ver estos valores podemos ir al inspector de nuestro Chrome y ver la opción de "Components" ahí veremos las properties.
