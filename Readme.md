@@ -25,3 +25,27 @@ Para correr react sólo hay que ejecutar:
     Las promesas se crean con un argumento que es un callback
 
 * Fetch: Para tener todo el detalle de como utilizarlo lea la documentación [Oficial](https://developer.mozilla.org/es/docs/Web/API/Fetch_API)
+
+## Componente
+Es una pequeña piea de código encapsulada reutilizable que puede tener un estado o no
+
+* TwiterApp
+    - Menu
+        - MenuItem
+
+Forma en la que podrías renderizar nuestra app:
+
+`TwiterApp > Router > Screen/Página > Menu > MenuItem`
+
+Es un pedazo de código que realiza una tarea en específico.
+
+## Estado
+Es como se encuentra la información de ese componente, la primera vez o eventualmente conforme el usuario interactue. El estado es la manera en la que se encuentra el componente en un punto determinado.
+
+## Creación de app usando VITE
+
+[Documentación oficial](https://vitejs.dev/)
+Para crear una app con Vite podemos usar `yarn create vite`.
+**NOTA:** Si no se tiene Yarn puede instalarlo usando el siguiente comando `npm install -g yarn`
+
+Cuando termine de crearse el proyecto ejecutamos `yarn` ó `yarn install` para traer todas las dependencias.
