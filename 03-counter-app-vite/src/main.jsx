@@ -9,7 +9,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <React.StrictMode>
         {/* Comentario: 
         Mandando a llamar el nombre de nuestra function */}
-        <HelloWorldApp /> 
+        {/* <HelloWorldApp />  */}
         <FirstApp />
     </React.StrictMode>
 );
