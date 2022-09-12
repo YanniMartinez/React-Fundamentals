@@ -44,12 +44,13 @@ import PropTypes from 'prop-types';
 
 
 //Normalmente se desescturcturan los datos, como acontinuación:
-export const FirstApp = ( {title, subTitle} ) => {
+export const FirstApp = ( {title, subTitle, name} ) => {
 
     return (
       <>
           <h1>{ title }</h1>
           <p>{ subTitle + 1}</p>
+          <p>{ name }</p>
       </>
     )
 }
@@ -58,12 +59,21 @@ export const FirstApp = ( {title, subTitle} ) => {
 /**
  * Utilizando y definiendo las propTypes (Definimos un objeto)
  */
-FirstApp.PropTypes = {
+FirstApp.propTypes = {
     /* Le inficamos que el titulo debe ser string y adem´sa requerido */
     title: PropTypes.string.isRequired,
-    subTitle: PropTypes.number.isRequired,
+    subTitle: PropTypes.string.isRequired,
 }
 
+
+/**
+ * Definiendo los default props
+ */
+FirstApp.defaultProps = {
+    title: 'No hay titulo',
+    subTitle: 'No hay Subtitulo',
+    name: 'Yanni'
+}
 
 /*
 export const FirstApp = ( props ) => {

@@ -133,3 +133,15 @@ FirstApp.PropTypes = {
     subTitle: PropTypes.number.isRequired,
 }
 ```
+
+## DefaultProps
+Como su nombre son las propiedades por defecto que se le asignan, un ejemplo de ello pueden ser lo siguiente:
+
+```
+FirstApp.defaultProps = {
+    title: 'No hay titulo',
+    subTitle: 'No hay Subtitulo',
+    name: 'Yanni'
+}
+```
+Normalmente estos proptypes se definen al final de las definiciones.
