@@ -1,6 +1,6 @@
-import {Fragment} from 'react'
+//import {Fragment} from 'react'
 /**
- * Si no utilizamos la siguiente biblioteca entonces el código
+ * Si no utilizamos la siguiente biblioteca : import {Fragment} from 'react'  entonces el código
  * se veria de la siguiente manera, generando un <div></div> de más
  * sumando procesamiento
  * 
@@ -12,12 +12,21 @@ import {Fragment} from 'react'
  * Sí usamos el fragmento entonces no debemos utilizarlo
  * 
  */
-export const FirstApp = () => {
-  return (
-    <Fragment>
-        <h1>Yanni Martinez</h1>
-        <p>Soy un subtitulo</p>
-    </Fragment>
-  )
-}
+// export const FirstApp = () => {
+//   return (
+//     <Fragment>
+//         <h1>Yanni Martinez</h1>
+//         <p>Soy un subtitulo</p>
+//     </Fragment>
+//   )
+// }
 
+//Equivalente de fragmentos: Siempre debemos regresar almenos 1 nodo padre
+export const FirstApp = () => {
+    return (
+      <>
+          <h1>Yanni Martinez</h1>
+          <p>Soy un subtitulo</p>
+      </>
+    )
+  }
