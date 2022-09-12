@@ -14,4 +14,4 @@ var _respApi$personajes;
 const respApi = { //personajes: ['Goku','Vegeta']
 };
 
-console.log((_respApi$personajes = respAPI.personajes)==null? void 0: _respApi$personajes.length)
+console.log((_respApi$personajes = respAPI.personajes)==null? void 0: _respApi$personajes.length);

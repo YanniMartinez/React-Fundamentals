@@ -11,3 +11,13 @@ Es tan sencillo como ejecutar el siguiente comando en nuestro CMD:
 Para correr react sólo hay que ejecutar:
 `npm start`
 
+
+## JS
+
+* Funciones de flecha:
+    ```
+    const saludar = function( nombre ) {
+     return `Hola, ${ nombre }`;
+    }
+    ```
+
