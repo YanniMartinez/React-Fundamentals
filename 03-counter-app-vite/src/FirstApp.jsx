@@ -29,19 +29,24 @@
  * en el scope global, significa que está dentro del componente encapsulado. 
  * REACT no re-renderizar elementos fuera de los functional components, ahorra recursos
  */
-const newMessage = {
-    message: 'Hola Mundo',
-    title: 'Yanni'
-};
-const newArray = [1,2,3,4,5,6,7,8,9];
+// const newMessage = {
+//     message: 'Hola Mundo',
+//     title: 'Yanni'
+// };
+// const newArray = [1,2,3,4,5,6,7,8,9];
+
+const getResult = (a,b) =>{
+    return a+b;
+}
 
 export const FirstApp = () => {
 
     return (
       <>
           {/* Como alternativa podemos usar un Stringify */}
-          <code> { JSON.stringify(newMessage) } </code>
-          <p>{ newArray }</p> {/* Notaremos que cada elemento está separado */}
+          {/* <code> { JSON.stringify(newMessage) } </code>
+          <p>{ newArray }</p> */} {/* Notaremos que cada elemento está separado */}
+          <h1>{ getResult( 1,2 )}</h1>
           <p>Soy un subtitulo</p>
       </>
     )
