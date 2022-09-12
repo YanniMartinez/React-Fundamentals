@@ -12,6 +12,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         Mandando a llamar el nombre de nuestra function */}
         {/* <HelloWorldApp />  */}
         {/* Cuando mandamos a llamar al componente se le pasan las props: */}
-        <FirstApp title="Hola, soy Goku!" subTitle={123}/>
+        <FirstApp />
     </React.StrictMode>
 );

@@ -42,7 +42,9 @@
 //Normalmente se desescturcturan los datos, como acontinuación:
 export const FirstApp = ( {title, subTitle} ) => {
 
-    console.log( title );
+    if(!title){
+        throw new Error('El title no existe');
+    }
 
     return (
       <>

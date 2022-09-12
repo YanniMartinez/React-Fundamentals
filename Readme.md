@@ -102,3 +102,25 @@ export const HelloWorldApp = () =>{
 Son las propiedades que se le mandan a las funciones, normalmente son desestructuradas. Estas son un objeto y contienen información dependiendo del contexto.
 Las properties son propiedades que fluyen del componente padre al componente hijo.
 Para ver estos valores podemos ir al inspector de nuestro Chrome y ver la opción de "Components" ahí veremos las properties.
+
+Los props son valores que le manda el elemento padre al elemento hijo, una manera de enviarlo desde el padre es el siguiente:
+`<FirstApp title="Hola, soy Goku!" subTitle={123}/>`
+
+Una manera de entenderlo como el hijo es la siguiente empleando la desestructuración:
+
+```
+export const FirstApp = ( {title, subTitle} ) => {
+
+    console.log( title );
+
+    return (
+      <>
+          <h1>{ title }</h1>
+          <p>{ subTitle + 1}</p>
+      </>
+    )
+}
+```
+
+## PropTypes
+Tipos de las properties.
