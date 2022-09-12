@@ -21,3 +21,5 @@ Para correr react sólo hay que ejecutar:
     }
     ```
 
+* Promesas: Por defecto son funciones asincronas [Consulte detalles aquí](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Promise). 
+    Las promesas se crean con un argumento que es un callback
