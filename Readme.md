@@ -197,3 +197,30 @@ Otra manera de hacerlo es mediante una función de flecha:
 ```
 
 * **NOTA:**Cuando cambia el estado, el componente se vuelve a ejecutar!
+
+
+## Pruebas Unitarias y de Integracion
+* Unitarias: Son enfocadas en pequeñas funcionalidades. (Una llanta como componente aislado)
+* Integración: Son enfocadas en cómo reaccionan varias piezas o funcionalidades en conjunto. (Tomar las llantas, montar carrocería y ver si trabajan como nosotros esperamos).
+
+Caracteristicas de las pruebas:
+
+1. Fáciles de escribir
+2. Fáciles de leer
+3. Confiables
+4. Rápidas
+5. Principalmente Unitarias
+
+Estos pasos son conocidos como **AAA** donde las siglas corresponden a:
+* Arrange (Arreglar): Es donde preparamos el paso inicial, usualmente se le conoce como identificar al sujeto, dentro de esta fase identificamos:
+    * Inicializar variables
+    * Importaciones necesarias
+
+* Act     (Actuar): Es donde aplicaremos funciones o estimulos al sujeto con acciones como: 
+    * Llamar métodos
+    * Simular clicks
+
+* Assert  (Afirmar): Es observar el resultado, es decir:
+    * Verificar que son los resultados esperados
+
+
