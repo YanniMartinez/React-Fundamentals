@@ -196,3 +196,4 @@ Otra manera de hacerlo es mediante una función de flecha:
   (c) hace referencia al Counter
 ```
 
+* **NOTA:**Cuando cambia el estado, el componente se vuelve a ejecutar!
