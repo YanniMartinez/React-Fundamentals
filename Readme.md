@@ -145,3 +145,6 @@ FirstApp.defaultProps = {
 }
 ```
 Normalmente estos proptypes se definen al final de las definiciones.
+
+## Documentación de eventos en REACT
+[Documentación oficial](https://es.reactjs.org/docs/events.html)
