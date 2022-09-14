@@ -12,11 +12,20 @@ import PropTypes from 'prop-types';
 
 export const CounterApp = ( { value } ) => {
 
-  /* Desestructuramos counter el cual hace referencia al valor del estado */
-  const [ counter ] = useState( 0 ) /* Debemos especificar el valor inicial */
+  /* Desestructuramos counter el cual hace referencia al valor del estado, para 
+  poder modificarlo más adelante, tambiénd desestructuraremos la función setCounter
+  Recordemos que Counter es debido al mismo nombre que nuestro functional Component*/
+  const [ counter, setCounter ] = useState( 0 ) /* Debemos especificar el valor inicial */
 
+  /**
+   * 
+   * @param {*} event 
+   * Cuando mandamos a llamar el setCounter, lo que le indicamos a REACT
+   * es que el estado cambió y por consecuencia debe volver a ejecutar la renderización
+   * del componente para que se vea reflejado en nuestro HTML.
+   */
   const handleAdd = ( event) => {
-    console.log(event);
+    setCounter( counter + 1 );
   }
 
 
