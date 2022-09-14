@@ -148,3 +148,24 @@ Normalmente estos proptypes se definen al final de las definiciones.
 
 ## Documentación de eventos en REACT
 [Documentación oficial](https://es.reactjs.org/docs/events.html)
+
+## Cambios en estado
+Cuando hacemos un cambio, debemos avisarle a REACT para que se redibuje en nuestro componente.
+
+## HOOKS
+Los hooks no son más que funciones, para conocer los detalles oficiales podemos consultar la [Documentación oficial](https://es.reactjs.org/docs/hooks-intro.html)
+
+Normalmente siempre se importa primero los hooks:
+
+
+`import { useState } from 'react'`
+
+En este caso **useState**, normalmente los hooks inician con **use** para que identifiquemos cuando se trata de un Hook. Cuando empleamos por primera vez un **useState** debemos indicarle el valor del estado, en este caso al iniciar siempre será **0**.
+
+```
+
+/* Desestructuramos counter el cual hace referencia al valor del estado */
+  const [ counter ] = useState( 0 ) /* Debemos especificar el valor inicial */
+
+
+```

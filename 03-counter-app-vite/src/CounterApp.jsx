@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import PropTypes from 'prop-types';
 
 /**La opción más eficiente es llamar una función de flecha, debido a
@@ -5,23 +6,24 @@ import PropTypes from 'prop-types';
  * no ocupa nunca el valor de "Value", valor que recibe del padre,
  * se recomienda declararla fuera del escope del CounterApp
  */
-const handleAdd = ( event) => {
-  console.log(event);
-}
+// const handleAdd = ( event) => {
+//   console.log(event);
+// }
 
 export const CounterApp = ( { value } ) => {
 
+  /* Desestructuramos counter el cual hace referencia al valor del estado */
+  const [ counter ] = useState( 0 ) /* Debemos especificar el valor inicial */
 
-  // function hanbleAdd(event, newValue){ 
-  //   // console.log(event);
-  //   console.log(newValue);
-  // }
+  const handleAdd = ( event) => {
+    console.log(event);
+  }
 
 
   return (
     <>
       <h1>CounterApp</h1>
-      <h2>{ value }</h2>
+      <h2>{ counter }</h2>
 
       {/* Los argumentos pasan por defecto al handleAdd con propiedades
       de los eventos */}
