@@ -12,7 +12,9 @@ export const CounterApp = ( { value } ) => {
       <h1>CounterApp</h1>
       <h2>{ value }</h2>
 
-      <button onClick={ (event) => handleAdd(event)}>
+      {/* Los argumentos pasan por defecto al handleAdd con propiedades
+      de los eventos */}
+      <button onClick={  handleAdd()}>
         +1
       </button>
     </>
