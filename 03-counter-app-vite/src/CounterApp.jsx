@@ -3,8 +3,9 @@ import PropTypes from 'prop-types';
 export const CounterApp = ( { value } ) => {
 
 
-  function hanbleAdd(event){ 
-    console.log(event)
+  function hanbleAdd(event, newValue){ 
+    // console.log(event);
+    console.log(newValue);
   }
 
   return (
@@ -14,7 +15,7 @@ export const CounterApp = ( { value } ) => {
 
       {/* Los argumentos pasan por defecto al handleAdd con propiedades
       de los eventos */}
-      <button onClick={  handleAdd()}>
+      <button onClick={ (event) => handleAdd( event, 'Hola' )}>
         +1
       </button>
     </>
