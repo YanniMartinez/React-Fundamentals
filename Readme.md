@@ -169,3 +169,30 @@ En este caso **useState**, normalmente los hooks inician con **use** para que id
 
 
 ```
+
+Forma de cambiar el valor del estado de nuestro Hook:
+```
+  /**
+   * 
+   * @param {*} event 
+   * Cuando mandamos a llamar el setCounter, lo que le indicamos a REACT
+   * es que el estado cambió y por consecuencia debe volver a ejecutar la renderización
+   * del componente para que se vea reflejado en nuestro HTML.
+   */
+  const handleAdd = ( event) => {
+    setCounter( counter + 1 );
+  }
+
+```
+
+Otra manera de hacerlo es mediante una función de flecha:
+```
+  const handleAdd = ( event) => {
+    //setCounter( counter + 1 ); Primera opción
+    //Segunda opción para modificar el estado:
+    setCounter( (c) => c+1 );
+  }
+
+  (c) hace referencia al Counter
+```
+

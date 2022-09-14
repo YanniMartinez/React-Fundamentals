@@ -15,7 +15,7 @@ export const CounterApp = ( { value } ) => {
   /* Desestructuramos counter el cual hace referencia al valor del estado, para 
   poder modificarlo más adelante, tambiénd desestructuraremos la función setCounter
   Recordemos que Counter es debido al mismo nombre que nuestro functional Component*/
-  const [ counter, setCounter ] = useState( 0 ) /* Debemos especificar el valor inicial */
+  const [ counter, setCounter ] = useState( value ) /* Debemos especificar el valor inicial */
 
   /**
    * 
@@ -25,7 +25,9 @@ export const CounterApp = ( { value } ) => {
    * del componente para que se vea reflejado en nuestro HTML.
    */
   const handleAdd = ( event) => {
-    setCounter( counter + 1 );
+    //setCounter( counter + 1 ); Primera opción
+    //Segunda opción para modificar el estado:
+    setCounter( (c) => c+1 );
   }
 
 
