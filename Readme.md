@@ -296,7 +296,7 @@ describe('Pruebas en <DemoComponent/>', () => {
 ### Pruebas sobre archivos
 Algo importante a identificar es que no podemos hacer prueba de algo que no está siendo exportado
 
-Posiblemente debamos configurar babel y para ello primero debemos instalar nuestra dependencia de desarrollo con el siguiente comando: `yarn add --dev babel-jest @babel/core @babel/preset-env` y además crear un archivo de nombre `babel.config.js` en la ruta de nuestro proyecto, además de incluir el siguiente valor dentro del archivo:
+Posiblemente debamos configurar babel y para ello primero debemos instalar nuestra dependencia de desarrollo con el siguiente comando: `yarn add --dev babel-jest @babel/core @babel/preset-env` y además crear un archivo de nombre `babel.config.cjs` en la ruta de nuestro proyecto, además de incluir el siguiente valor dentro del archivo:
 ```
 module.exports = {
   presets: [['@babel/preset-env', {targets: {node: 'current'}}]],
