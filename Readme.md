@@ -242,6 +242,9 @@ Tras instalar la dependencia, lo que debemos hacer es incluir el siguiente fragm
 
 Tras esto podemos crear nuestros archivos con pruebas. Finalmente para correrlas sólo hay que ejecutar el comando `yarn test`
 
+Para incluir un Test más automatico podemos agregar la siguiente configuración dentro del script definido al inicio de la sección.
+`"test": "jest --watchAll"`
+
 
 
 
