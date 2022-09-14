@@ -224,3 +224,24 @@ Estos pasos son conocidos como **AAA** donde las siglas corresponden a:
     * Verificar que son los resultados esperados
 
 
+## Pruebas unitarias
+Para ello podemos usar **JEST**, una de las herramientas más conocidas para pruebas unitarias [Consulte la documentación unitaria](https://jestjs.io/)
+Y para incluir la biblioteca es tan sencilla como ejecutar el siguiente comando:
+
+`yarn add --dev jest`
+
+Tras instalar la dependencia, lo que debemos hacer es incluir el siguiente fragmento de código en el .JSON:
+
+```
+{
+  "scripts": {
+    "test": "jest"
+  }
+}
+```
+
+Tras esto podemos crear nuestros archivos con pruebas. Finalmente para correrlas sólo hay que ejecutar el comando `yarn test`
+
+
+
+
