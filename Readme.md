@@ -245,6 +245,51 @@ Tras esto podemos crear nuestros archivos con pruebas. Finalmente para correrlas
 Para incluir un Test más automatico podemos agregar la siguiente configuración dentro del script definido al inicio de la sección.
 `"test": "jest --watchAll"`
 
+En JEST para indicar si un elemento es identico al otro se usar algo como lo siguiente:
+
+```
+test('Esta prueba no debe de fallar', () => {
+    //1. Inicialización
+    const message1 = 'Hola Mundo';
+
+    //2. Estimulo
+    const message2= message1.trim();
+
+    //3. Observar el comportamiento ... esperado?
+    expect( message1 ).toBe( message2 );
+
+})
+```
+
+Ahora bien, para tener una recomendación sobre los métodos de JEST lo que podemos hacer es instalar la siguiente dependencia: `yarn add -D @types/jest`
+
+Ahora bien, si quisieramos ser más elegantes y queremos agrupar pruebas podemos ponerlos dentro de un Describe como el siguiente ejemplo:
 
 
+```
+/**
+ * * Para realizar alguna agrupación podemos poner la siguiente sintaxis:
+ * * describe('Nombre del grupo', () => { Contenido }
+ */
+describe('Pruebas en <DemoComponent/>', () => {
+
+    //**************  AQUI DENTRO TODAS LAS PRUEBAS DEL GRUPO ****************** */
+
+    /** La sintaxis es la siguiente:
+     * * test('Titulo de nuestra prueba', callBack() )
+    */
+    test('Esta prueba no debe de fallar', () => {
+        //1. Inicialización
+        const message1 = 'Hola Mundo';
+
+        //2. Estimulo
+        const message2= message1.trim();
+
+        //3. Observar el comportamiento ... esperado?
+        expect( message1 ).toBe( message2 );
+
+    })
+})
+
+```
 
