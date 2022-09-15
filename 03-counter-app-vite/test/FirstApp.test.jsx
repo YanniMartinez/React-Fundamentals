@@ -51,12 +51,14 @@ describe('Pruebas en <FirstApp/>', () => {
     const title='Hola, soy Goku';
     const subTitle='Soy un subtitulo';
     const { getByText}=render(
+    //const { getAllByText}=render(      Si quisieramos obtener más de 1 con ese atributo
         <FirstApp 
           title={title}
           subTitle={subTitle}
         />
     );
-    expect( getByText(title)).toBeTruthy();
+    expect( getByText(subTitle)).toBeTruthy();
+    //expect( getAllByText(subTitle).length).toBe(2); Si esperaramos almenos 2 elementos
   })
   
 })
