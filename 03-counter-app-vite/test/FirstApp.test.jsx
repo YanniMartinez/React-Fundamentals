@@ -26,5 +26,21 @@ describe('Pruebas en <FirstApp/>', () => {
 
     
   })
+
+  test('Debe de mostrar el título en un H1',()=>{
+    const title='Hola, Soy Goku';
+    /**Además podemos extraer diferentes métodos del render */
+    const { container, getByText} = render(<FirstApp title={title}/>);
+
+    //Asegura que en lo que renderizamos exista ese texto
+    //expect( getByText(title)).toBeTruthy();
+
+    /** Container es el documento */
+    const h1 = container.querySelector('h1'); //Buscamos un h1 (Sólo 1)
+    //expect(h1.innerHTML).toBe(title);
+    expect(h1.innerHTML).toContain(title);
+
+
+  })
   
 })

@@ -363,3 +363,5 @@ describe('Pruebas en <FirstApp/>', () => {
   
 })
 ```
+
+Podemos actualizar nuestro snapshot presionando la tecla **u**.
