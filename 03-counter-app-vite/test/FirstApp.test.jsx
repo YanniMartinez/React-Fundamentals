@@ -46,5 +46,17 @@ describe('Pruebas en <FirstApp/>', () => {
 
 
   })
+
+  test('Debe mostrar el subtitulo enviado por PROPS',()=>{
+    const title='Hola, soy Goku';
+    const subTitle='Soy un subtitulo';
+    const { getByText}=render(
+        <FirstApp 
+          title={title}
+          subTitle={subTitle}
+        />
+    );
+    expect( getByText(title)).toBeTruthy();
+  })
   
 })
