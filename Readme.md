@@ -303,3 +303,8 @@ module.exports = {
 };
 ```
 
+## Testing de componentes de REACT
+Para poder implementar test sobre componentes de REACT se sugiere usar **Testing Library** si se requiere más detalles [Refiera la documentación oficial](https://testing-library.com/)
+En este caso usaremos JEST para implementar Expect, toBe, toEqual, etc. Y además React Testing Library debido a que es muy bueno para realizar testing the DOM virtual dentro de nuestra consola, podremos hacer simulación de Clicks, etc. (Está más enfocado a lo que sucede en la pantalla).
+
+Para ello ejecutaremos el siguiente comando: `yarn add --dev @testing-library/react`
