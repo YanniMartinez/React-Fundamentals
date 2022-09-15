@@ -50,7 +50,7 @@ export const FirstApp = ( {title, subTitle, name} ) => {
       <>
           {/* El data-testid sirve como un atributo para obtener valores */}
           <div data-testid="test-title">{ title }</div >
-          <p>{ subTitle + 1}</p>
+          <p>{ subTitle}</p>
           <p>{ name }</p>
       </>
     )

@@ -367,3 +367,5 @@ describe('Pruebas en <FirstApp/>', () => {
 Podemos actualizar nuestro snapshot presionando la tecla **u**.
 
 Nosotros haremos la prueba del Snapshot cuando compobamos que nuestro componente ya no recibirá modificaciones. Asegura que el componente posee un estado en específico, es por ello que se recomienda hacerlo hasta el final.
+
+Algo muy importante al hacer pruebas de componentes react  es el **screen** debido a que nos permite conocer el estado que tiene el objeto en ese momento.
