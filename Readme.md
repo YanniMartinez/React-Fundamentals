@@ -308,3 +308,17 @@ Para poder implementar test sobre componentes de REACT se sugiere usar **Testing
 En este caso usaremos JEST para implementar Expect, toBe, toEqual, etc. Y además React Testing Library debido a que es muy bueno para realizar testing the DOM virtual dentro de nuestra consola, podremos hacer simulación de Clicks, etc. (Está más enfocado a lo que sucede en la pantalla).
 
 Para ello ejecutaremos el siguiente comando: `yarn add --dev @testing-library/react`
+
+## Configuraciones JEST y React Testing Library
+Para poder seguir con ello hay que agregar las siguientes líneas a nuestro archivo *jest.config.cjs*: `testEnvironment: 'jest-environment-jsdom'`, además de instalar la dependencia: `yarn add -D jest-environment-jsdom`
+Además tener la siguiente configuración en nuestro archivo **babel.config.cjs** 
+```
+module.exports = {
+  presets: [
+    ['@babel/preset-env', {targets: { esmodules:true}}],
+    ['@babel/preset-react', { runtime:automatic}],
+  ],
+};
+```
+
+Para instalar algo de este archivo es muy sencillo como poner `yarn add -D @babel/preset-react`
