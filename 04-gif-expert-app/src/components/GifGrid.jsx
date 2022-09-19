@@ -5,13 +5,22 @@ import { getGifs } from "../helpers/getGifs";
 //rafc
 export const GifGrid = ( {category }) => {
   
-  const [counter, setcounter] = useState(10);
+  const [images, setImages] = useState([])
+
+  const getImages = async() =>{
+    const newImages = await getGifs( category );
+    setImages(newImages);
+  }
 
   //Uso del Hook useEffect: Es un Hook de React que permite lanzar efectos secundarios
   //Un efecto secundario es algo que queremos que se ejecute despues de que suceda algo
   //Aquí le indicaremos que cargue el HTTP unicamente cuando se cargue por primera vez
   useEffect( () => {
-    getGifs(category);
+    //Opción 1 para mandar a llamar las imagenes
+    //getGifs(category)
+    //  .then( newImages => setImages(newImages));
+
+    getImages();
     
   }, []);
 
@@ -21,8 +30,16 @@ export const GifGrid = ( {category }) => {
   return(
     <>
         <h3>{ category }</h3>
-        <h5>Hola mundo</h5>
-        <button onClick={ () => setCounter(counter+1)}>+1</button>
+        <ol>
+          {/* images.map */}
+          { 
+            images.map( ({id, title}) =>
+            (
+              <li key={id}>{title}</li>
+            )) 
+          }
+
+        </ol>
     </>
   )
 }
