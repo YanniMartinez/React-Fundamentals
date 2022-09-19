@@ -40,7 +40,10 @@ describe('Pruebas de <CounterApp/>', () => {
         fireEvent.click(screen.getByText('+1'));
         fireEvent.click(screen.getByText('+1'));
         fireEvent.click(screen.getByText('+1'));
-        fireEvent.click(screen.getByText('Reset'));
+        // fireEvent.click(screen.getByText('Reset'));
+
+        //Tomando elemento por aria-label y por botón
+        fireEvent.click(screen.getByRole('button',{name: 'btn-reset'})); //Aseguramos que tomamos ese botón
 
         screen.debug();
         expect(screen.getByText(initialValue)).toBeTruthy();
