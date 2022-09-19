@@ -11,6 +11,7 @@ export const GifExpertApp = () =>{
      */
     const onAddCategory = ( newCategory) =>{
         //categories.push('Zelda');
+        if( categories.includes(newCategory) ) return;
         // setcategories( [...categories,'Zelda']);  //Forma 1 de hacerlo
         setcategories( [newCategory,...categories]);  //Forma 1 de hacerlo
         // setcategories( cat => [...cat, 'Valorant']); //Forma 2 de hacerlo
