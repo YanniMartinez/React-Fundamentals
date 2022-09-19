@@ -9,10 +9,10 @@ export const GifExpertApp = () =>{
     /**
      * Agregar un nuevo elemento al estado de categorias
      */
-    const onAddCategory = () =>{
+    const onAddCategory = ( newCategory) =>{
         //categories.push('Zelda');
         // setcategories( [...categories,'Zelda']);  //Forma 1 de hacerlo
-        setcategories( ['Zelda',...categories]);  //Forma 1 de hacerlo
+        setcategories( [newCategory,...categories]);  //Forma 1 de hacerlo
         // setcategories( cat => [...cat, 'Valorant']); //Forma 2 de hacerlo
     }
 
@@ -24,7 +24,10 @@ export const GifExpertApp = () =>{
 
             {/* Input */}
             {/* Le mandamos la referencia de las categorias */}
-            <AddCategory setCategories={setcategories}/>
+            <AddCategory 
+                //setCategories={setcategories}
+                onNewCategory={ value => onAddCategory(value) }
+            />
 
 
             {/* Listado de Gifs */}

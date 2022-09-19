@@ -1,7 +1,7 @@
 import { useState } from "react"
 
 
-export const AddCategory = ( {setCategories} ) =>{
+export const AddCategory = ( { onNewCategory } ) =>{
 
     //Debemos manejar el estado de lo que va escribiendo
     const [inputValue, setInputValue] = useState('');
@@ -18,7 +18,10 @@ export const AddCategory = ( {setCategories} ) =>{
         //Si es 1 o 0 no agrega nada
         if( inputValue.trim().length<= 1 ) return;
         //
-        setCategories( categories => [inputValue, ...categories]);
+        //setCategories( categories => [inputValue, ...categories]);
+
+        onNewCategory(inputValue.trim());
+
 
         //Limpiando valor
         setInputValue('');
