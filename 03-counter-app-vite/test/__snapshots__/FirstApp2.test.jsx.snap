@@ -2,11 +2,11 @@
 
 exports[`Pruebas en <FirstApp/> Debe de hacer match con el Snapshot 1`] = `
 <div>
-  <div
+  <h1
     data-testid="test-title"
   >
     Hola, Soy Goku
-  </div>
+  </h1>
   <p>
     No hay Subtitulo
   </p>
