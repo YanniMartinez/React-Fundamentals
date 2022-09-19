@@ -369,3 +369,49 @@ Podemos actualizar nuestro snapshot presionando la tecla **u**.
 Nosotros haremos la prueba del Snapshot cuando compobamos que nuestro componente ya no recibirá modificaciones. Asegura que el componente posee un estado en específico, es por ello que se recomienda hacerlo hasta el final.
 
 Algo muy importante al hacer pruebas de componentes react  es el **screen** debido a que nos permite conocer el estado que tiene el objeto en ese momento.
+
+
+## Pruebas con REACT y JEST
+
+
+Plantillas que siempre usaremos para el testing:
+
+* Descripción general:
+  ```
+  describe('Pruebas de <CounterApp/>', () => { 
+    Dentro iran nuestros test o variables:
+
+    const initialValue=10;
+
+    test('Debe hacer match con el Snapshot', () => { 
+        const {container} = render(<CounterApp value={initialValue}/>);
+        expect(container).toMatchSnapshot();
+    });
+
+  }
+  ```
+
+* Test de un elemento:
+  ```
+  test('Debe hacer match con el Snapshot', () => { 
+    const {container} = render(<CounterApp value={initialValue}/>);
+    expect(container).toMatchSnapshot();
+  });
+
+  
+  ```
+
+
+**Tabla de funciones para el TEST:**
+
+|Expresión|Uso|
+|--|--|
+|const {container} = render(<FirstApp title={title}/>);| Renderiza nuestro componente y lo desestructura en nuestro container|
+|expect( getByText(title)).toBeTruthy();| Espera que el titulo exista|
+|expect( getByTestId('test-title')).toBeTruthy();|Espera que el titulo tenga el valor de `test-title`|
+|expect( getByTestId('test-title').innerHTML).toContain(title);|Espera que se tenga de contenido `test-title` dentro de un componente HTML|
+|expect(container).toMatchSnapshot();|Espera que se haga un match con el Snapshot|
+|Screen| Es la  representación del estado del componente en ese momento|
+|fireEvent.click(screen.getByText('+1')); expect(screen.getByText('11')).toBeTruthy();|Simula un click en el elemento +1 y al final espera que se haya incrementado en 1|
+|||
+|||
