@@ -23,11 +23,11 @@ export const GifExpertApp = () =>{
 
 
             {/* Input */}
-            <AddCategory />
+            {/* Le mandamos la referencia de las categorias */}
+            <AddCategory setCategories={setcategories}/>
 
 
             {/* Listado de Gifs */}
-            <button onClick={onAddCategory}>Agregar</button>
             <ol>
                 {/* Es forzoso mandar una llave */}
                 { categories.map( category =>{
