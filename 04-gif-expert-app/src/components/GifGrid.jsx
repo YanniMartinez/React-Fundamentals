@@ -1,8 +1,10 @@
+import { getGifs } from "../helpers/getGifs";
 
 //rafc
 export const GifGrid = ( {category }) => {
   
-  
+
+  getGifs(category);
 
   return(
     <>
